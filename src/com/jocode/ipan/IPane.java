@@ -84,27 +84,6 @@ public class IPane  extends JPanel{
     }
     
     
-    public IPane insert(Component... cmps){
-        
-        for(int i = 0, l = cmps.length; i < l; i++){
-            
-            Component cmp = cmps[i];
-            initContraints();
-            
-            if(cmp != null) {
-                add(cmps[i], gbc);
-            }
-            
-            index++;
-        }
-        return this;
-    }
-    
-    public IPane insert(int j, Component... cmps){
-        
-        index = j;
-        return insert(cmps);
-    }
     
     protected void initContraints(){
         
